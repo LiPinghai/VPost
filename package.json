@@ -1,7 +1,7 @@
 {
   "name": "vpost",
   "version": "0.0.1",
-  "description": "An easy module for frontend engineer to create temporary API with node.js",
+  "description": "An easy module for frontend engineer to create temporary API with node.js.本模块适用于前端工程师创建临时接口用于调试代码。",
   "main": "test.js",
   "directories": {
     "test": "test/test"
