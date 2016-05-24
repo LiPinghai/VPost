@@ -61,6 +61,9 @@ var vPost = new VPost(config);
 request：127.0.0.1:2048/test/getString<br>
 response：{"str":"aa"}
 
+request：127.0.0.1:2048/test/getObject<br>
+response：{"a":"a","b":"b1","c":"c","d":{"d1":"d1","d2":"d21","d3":"d3","d4":{"d41":"d41"}}}
+
 request：127.0.0.1:2048/test/getMoney<br>
 response：not found
 
