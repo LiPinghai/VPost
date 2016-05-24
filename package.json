@@ -1,0 +1,18 @@
+{
+  "name": "vpost",
+  "version": "0.0.1",
+  "description": "An easy module for frontend engineer to create temporary API with node.js",
+  "main": "test.js",
+  "directories": {
+    "test": "test/test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeremyWei/easy_mongo.git"
+  },
+  "author": "LiPinghai",
+  "license": "ISC"
+}
