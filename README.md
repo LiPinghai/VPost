@@ -55,15 +55,12 @@ var config = {
 var vPost = new VPost(config);
 
 用node运行起来，即可在127.0.0.1:2048访问到接口：
-请求：
-  127.0.0.1:2048/test/getString
-返回：
-  {"str":"aa"}
 
-请求：
-  127.0.0.1:2048/test/getObject
-返回：
-  {"a":"a","b":"b1","c":"c","d":{"d1":"d1","d2":"d21","d3":"d3","d4":{"d41":"d41"}}}
+请求：127.0.0.1:2048/test/getString
+返回：{"str":"aa"}
+
+请求：127.0.0.1:2048/test/getObject
+返回：{"a":"a","b":"b1","c":"c","d":{"d1":"d1","d2":"d21","d3":"d3","d4":{"d41":"d41"}}}
 
 参数说明：
   rootPath：根路径；
