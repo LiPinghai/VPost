@@ -1,8 +1,8 @@
 # VPost
 
-An easy module for frontend engineer to create temporary API with node.js
+Short for virtual-post, an easy module for frontend engineer to create temporary API with node.js
 
-本模块适用于前端工程师创建临时接口用于调试代码。样例如下：
+本模块(virtual-post)适用于前端工程师创建临时接口用于调试代码。样例如下：
 
 ##example：
 ```javascript
