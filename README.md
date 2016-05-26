@@ -45,6 +45,10 @@ var config = {
 					}
 				}
 			}
+		},
+		{
+			"req":/regExp/i,
+			"res":"RegExp"
 		}
 	],
 	default:"not found",
@@ -64,15 +68,19 @@ response：{"str":"aa"}
 request：127.0.0.1:2048/test/getObject<br>
 response：{"a":"a","b":"b1","c":"c","d":{"d1":"d1","d2":"d21","d3":"d3","d4":{"d41":"d41"}}}
 
+request：127.0.0.1:2048/test/getRegExp<br>
+response：RegExp
+
 request：127.0.0.1:2048/test/getMoney<br>
 response：not found
+
 
 ##参数说明 para intro：
  >rootPath：根路径；<br>
   
  >data：请求参数数组:<br>
  >>code为返回状态码，选填，默认200<br>
- >>req为请求路径；<br>
+ >>req为请求路径,可以为字符串或正则表达式；<br>
  >>res为返回参数（接受字符串/数字/数组/函数/对象）；<br>
  
  >>>返回参数为数组时，随机返回数组中某一值，如需要返回数组，请用括号括起，如'[1,2,3]'<br>
