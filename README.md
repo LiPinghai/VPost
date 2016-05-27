@@ -10,6 +10,7 @@ var VPost = require("../lib/VPost");
 
 var config = {
 	rootPath:"/test",
+	filePath: "",
 	data:[
 		{
 			"req":"/getString",
@@ -71,13 +72,16 @@ response：{"a":"a","b":"b1","c":"c","d":{"d1":"d1","d2":"d21","d3":"d3","d4":{"
 request：127.0.0.1:2048/test/getRegExp<br>
 response：RegExp
 
+request：127.0.0.1:2048/index.html<br>
+response：index.html file
+
 request：127.0.0.1:2048/test/getMoney<br>
 response：not found
 
 
 ##参数说明 para intro：
  >rootPath：根路径；<br>
-  
+ >filePath：文件根路径，默认为‘www/’；<br>
  >data：请求参数数组:<br>
  >>code为返回状态码，选填，默认200<br>
  >>req为请求路径,可以为字符串或正则表达式；<br>
