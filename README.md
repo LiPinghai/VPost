@@ -78,6 +78,7 @@ response：index.html file
 request：127.0.0.1:2048/test/getMoney<br>
 response：not found
 
+VPost接收到请求时，优先匹配接口，假如没有成功匹配对应接口，则继续尝试匹配文件（默认放入www/文件夹内），二者都匹配失败时返回404
 
 ##参数说明 para intro：
  >rootPath：根路径；<br>
