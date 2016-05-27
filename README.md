@@ -63,6 +63,8 @@ var vPost = new VPost(config);
 ##用node运行起来，即可在127.0.0.1:2048访问到接口：
 ##run by node and visit in 127.0.0.1:2048:
 
+VPost接收到请求时，优先匹配接口，假如没有成功匹配对应接口，则继续尝试匹配文件（默认放入www/文件夹内），二者都匹配失败时返回404
+
 request：127.0.0.1:2048/test/getString<br>
 response：{"str":"aa"}
 
@@ -78,8 +80,6 @@ response：index.html file
 request：127.0.0.1:2048/test/getMoney<br>
 response：not found
 
-VPost接收到请求时，优先匹配接口，假如没有成功匹配对应接口，则继续尝试匹配文件（默认放入www/文件夹内），二者都匹配失败时返回404
-
 ##参数说明 para intro：
  >rootPath：根路径；<br>
  >filePath：文件根路径，默认为‘www/’；<br>
@@ -91,7 +91,6 @@ VPost接收到请求时，优先匹配接口，假如没有成功匹配对应接
  >>>返回参数为数组时，随机返回数组中某一值，如需要返回数组，请用括号括起，如'[1,2,3]'<br>
  >>>为函数时，返回函数返回值，<br>
  >>>为对象时，会遍历该对象，对象中的value转换成对应的字符串；<br>
- 
   
  >default：没有找到对应接口时返回的值；<br>
   
