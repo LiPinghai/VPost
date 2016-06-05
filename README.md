@@ -18,9 +18,9 @@ var config = {
 			"code":"201"
 		},
 		{
-			"req":"/getFuntion",
-			"res":function(){
-				return '{"funtion":"' + String(Math.random())+'"}' 
+			"req":"/getFunction?a=111",
+			"res":function(url){
+				return '{"function":"' + String(Math.random()) + '","a":"' + url.$query.a + '"}' 
 			}
 		},
 		{
@@ -68,6 +68,9 @@ VPost接收到请求时，优先匹配接口，假如没有成功匹配对应接
 request：127.0.0.1:2048/test/getString<br>
 response：{"str":"aa"}
 
+request：127.0.0.1:2048/test/getFunction?a=111<br>
+response：{"function":"0.2123435453534","a":"111"}
+
 request：127.0.0.1:2048/test/getObject<br>
 response：{"a":"a","b":"b1","c":"c","d":{"d1":"d1","d2":"d21","d3":"d3","d4":{"d41":"d41"}}}
 
@@ -89,7 +92,7 @@ response：not found
  >>res为返回参数（接受字符串/数字/数组/函数/对象）；<br>
  
  >>>返回参数为数组时，随机返回数组中某一值，如需要返回数组，请用括号括起，如'[1,2,3]'<br>
- >>>为函数时，返回函数返回值，<br>
+ >>>为函数时，返回函数返回值，可在参数中传入一个url对象，包含$query和$search两个属性<br>
  >>>为对象时，会遍历该对象，对象中的value转换成对应的字符串；<br>
   
  >default：没有找到对应接口时返回的值；<br>
