@@ -40,7 +40,7 @@ var config = {
 			},{
 				"req":"/getQuery",
 				"res":function(url){
-					return  url.$query.a
+					return  url.$search
 				}
 			}
 		],
