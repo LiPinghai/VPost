@@ -7,9 +7,9 @@ var config = {
 			"req": "getString",
 			"res": "string",
 		}, {
-			"req": "/getFuntion",
+			"req": "/getFunction",
 			"res": function() {
-				return '{"funtion":"' + String(Math.random()) + '"}'
+				return '{"function":"' + String(Math.random()) + '"}'
 			}
 		}, {
 			"req": "/getArray",
@@ -38,15 +38,9 @@ var config = {
 				"req":/regExp/i,
 				"res":"RegExp"
 			},{
-				"req":"/actDisney/common/getUserInfo",
-				"res":{
-					code:1,
-					msg:"",
-					data:{
-				      "headimgurl": "......",
-				      "nickname": "小yeah",
-				      "hero_coins": 3000
-				    }
+				"req":"/getQuery",
+				"res":function(url){
+					return  url.$query.a
 				}
 			}
 		],
